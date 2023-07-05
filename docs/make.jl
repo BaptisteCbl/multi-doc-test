@@ -71,10 +71,9 @@ docs = [
 try
     outpath = mkdir("docs/out")
 catch e
-    println(e)
-finally
-    outpath = "docs/out" 
+    println(e) 
 end
+outpath = "docs/out" 
 MultiDocumenter.make(
     outpath,
     docs;
