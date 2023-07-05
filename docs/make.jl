@@ -68,9 +68,13 @@ docs = [
         # giturl = "git@github.com:JuliaComputing/DataSets.jl.git",
     ),
 ]
-
-outpath = mkdir("docs/out")
-
+try
+    outpath = mkdir("docs/out")
+catch e
+    println(e)
+finally
+    outpath = "docs/out" 
+end
 MultiDocumenter.make(
     outpath,
     docs;
