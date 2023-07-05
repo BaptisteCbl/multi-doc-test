@@ -74,6 +74,7 @@ catch e
     println(e) 
 end
 outpath = "docs/out" 
+
 MultiDocumenter.make(
     outpath,
     docs;
