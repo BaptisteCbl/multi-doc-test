@@ -69,11 +69,11 @@ docs = [
     ),
 ]
 try
-    outpath = mkdir("docs/")
+    outpath = mkdir("docs/out")
 catch e
     println(e) 
 end
-outpath = "docs/" 
+outpath = "docs/out" 
 MultiDocumenter.make(
     outpath,
     docs;
@@ -81,5 +81,5 @@ MultiDocumenter.make(
         index_versions = ["stable"],
         engine = MultiDocumenter.FlexSearch,
     ),
-    rootpath = "",
+    rootpath = "/MULTI-DOC-TEST/",
 )
