@@ -69,11 +69,11 @@ docs = [
     ),
 ]
 try
-    outpath = mkdir("docs/out")
+    outpath = mkdir("docs/")
 catch e
     println(e) 
 end
-outpath = "docs/out" 
+outpath = "docs/" 
 MultiDocumenter.make(
     outpath,
     docs;
