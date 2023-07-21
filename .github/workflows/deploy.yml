@@ -26,7 +26,7 @@ jobs:
       - name: Aggregate and deploy
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
-            #DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
+            DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
